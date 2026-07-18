@@ -1,0 +1,56 @@
+
+@keyframes move_2 {
+    0% {
+        content: "|";
+    }
+    10% {
+        content: " |";
+    }
+    20% {
+        content: " |";
+    }
+    30% {
+        content: "De |";
+    }
+    40% {
+        content: "Desi |";
+    }
+    50% {
+        content: "Design |";
+    }
+    60% {
+        content: "Designe |";
+    }
+    70% {
+        content: "Designer|";
+    }
+    80% {
+        content: "Designer |";
+    }
+    90% {
+        content: "Designer |";
+    }
+    100% {
+        content: "Designer |";
+    }
+
+}
+
+
+@keyframes move_1 {
+    0%{
+        top: -25%;
+        opacity: 1;
+    }
+
+    50%{
+        top: 50%;
+        opacity: 1;
+    }
+
+    100% {
+        top: 50%;
+        opacity: 0;
+    }
+
+}
