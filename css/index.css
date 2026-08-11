@@ -13,7 +13,7 @@ nav .container {
     align-items: center;
 }
 nav .container .logo {
-    width: 5%;
+    max-width: 5%;
 }
 nav .container .logo img{
     width: 100%;
@@ -24,16 +24,14 @@ nav .container .burger {
 nav .container .links ul{
     display: flex;
     list-style: none;
-   /*  justify-content: space-between; */
-   column-gap: 18px;
-
+    column-gap: 18px;
 }
 nav .container .links ul li a{
     text-decoration: none;
     color: #fff;
     letter-spacing: 1.5px;
     position: relative;
-    transition: 1s;
+    transition: 0.5s;
 }
 nav .container .links ul li.active a,
 nav .container .links ul li:hover a{
@@ -48,7 +46,7 @@ nav .container .links ul li a::after{
     position: absolute; 
     bottom: -5px;
     left: 50%; 
-   transition-duration: 1s;
+   transition-duration: 0.5s;
    transform: translate(-50%);
 }
 nav .container .links ul li.active a::after,
@@ -57,12 +55,11 @@ nav .container .links ul li:hover a::after {
 } 
 
 header {
-    background-color: aqua;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("./../images/slider-01-cd8154e4.jpg");
+    background-image: url("./../images/background.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -78,24 +75,21 @@ header::before {
     left: 0;
 }
 header .content {
-/*     position: relative; */
     z-index: 2;
     text-align: center;
     color:#fff;
 }
 header .content h3{
-    /* font-size: 30px; */
     font-size: clamp(1rem, 3vw, 2rem);
 
 }
 header .content h1{
-  /*   font-size: 80px; */
     font-size: clamp(3rem, 6vw, 6rem);
     margin: 15px 0;
     color: var(--main_color);
+    text-shadow: 10px 5px 40px var(--main_color);
 }
 header .content p{
-/*     font-size: 20px; */
     font-size: clamp(.8rem, 4vw, 1.5rem);
 
 }
@@ -109,10 +103,8 @@ header a.animate {
     height: 60px;
     border: var(--main_color) 2px solid;
     border-radius: 115px;
-   /*  align-self: end; */
     position: absolute;
     bottom: 0;
-/*     left: 50%; */
     transform: translateY(-100%);
     overflow: hidden;
 }
@@ -146,7 +138,6 @@ header a.animate::before {
     border: 3px solid var(--main_color);
     border-radius: 10px;
     margin: auto;
-
 } 
 #About .container .part1 .image_box{
     position: relative;
@@ -157,8 +148,7 @@ header a.animate::before {
     transform: translate(15px,15px);
 }
 #About .container .part1 .image_box img{
-    width: 100%;
-   /*  height: 100%; */
+    max-width: 100%;
     display: block;
     border-radius: 10px;
     position: relative;
@@ -188,15 +178,20 @@ header a.animate::before {
 }
 #About .container .part1 .image_box .layout ul li{
     background-color: #fff;
-/*     padding: 5px; */
     width: 45px;
     height: 45px;
     border-radius: 50%;
+    opacity: 0;
+    translate: 0 -20px;
+}
+#About .container .part1 .image_box .layout ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    translate: 0 -20px;
+    text-decoration: none;
 }
 #About .container .part1 .image_box:hover .layout ul li{
     opacity: 1;
@@ -304,7 +299,7 @@ header a.animate::before {
     border-radius: 15px;
     border: 1px var(--main_color) solid;
     margin-inline: 10px;
-    transition: 1s;
+    transition: 0.5s;
     transform: translateY(0px);
 }
 #Services .content .box .item:hover{
@@ -398,7 +393,6 @@ header a.animate::before {
 #Blog .content {
     display: flex;
     flex-wrap: wrap;
-   /*  column-gap: 1px; */
 }
 #Blog .content .box{
     width: 33.33%;
@@ -407,8 +401,8 @@ header a.animate::before {
     border-radius: 10px;
     border:2px solid var(--main_color);
     overflow: hidden;
-    width: 280px;
-    margin: auto;
+    max-width: 280px;
+    margin-inline: auto;
 }
 #Blog .content .box .item .image iframe,
 #Blog .content .box .item .image img{
@@ -478,6 +472,11 @@ header a.animate::before {
     border:1px solid var(--main_color);
     padding: 10px;
     background-color: transparent;
+    color: #fff;
+}
+#ContactUs form .input .item input:focus,
+#ContactUs form .input .item textarea:focus{
+    outline: none;
 }
 #ContactUs form .input .item textarea{
     resize: none;
@@ -490,14 +489,14 @@ header a.animate::before {
 #ContactUs form button{
     color: var(--main_color);
     border-radius: 10px;
-    border: 1px solid var(--main_color);
     padding:10px 15px ;
     background-color: transparent;
     cursor: pointer;
-    transition-duration: 0.5s;
-    width: 100%; 
+    transition-duration: 0.3s;
+    border: 1px solid var(--main_color);
 }
-#ContactUs form button{
+
+#ContactUs form button:hover{
     color: #fff;
     background-color: var(--main_color);
 }

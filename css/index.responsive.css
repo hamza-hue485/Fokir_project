@@ -1,7 +1,7 @@
 /*350*/
 @media (max-width : 1300px) {
         nav .container .logo {
-        width: 15%;
+        max-width: 15%;
     }
 
       nav .container .links .burger {
@@ -23,15 +23,15 @@
     }
 
     nav .container .links ul{
-        background-color: var(--bg_color);
+        background-color: var(--nav_color);
         position: absolute;
         bottom:-10px;
         left: 0;
-        right: 0;/*حدد حدود العنصر من الاتجاهين */
+        right: 0;/*  */
         transform: translateY(100%);
         flex-direction: column;
         align-items: center;
-        row-gap: 15px;
+        row-gap: 20px;
         width: 90%;
         margin: auto;
         border-radius:10px;
@@ -41,11 +41,12 @@
         overflow: hidden;
     }
     nav .container .links .burger:focus + ul {
-        height: 229px;
+        height: 254px;
         padding-block: 20px; 
-
     }
     
+
+
     #About .container [class^="part"] {
         width: 100%;
     }
@@ -55,11 +56,9 @@
     #About .container .part1 {
         margin-bottom:40px;
     }
-    
     #About .container .part1 .frame {
         width: 280px;
     }
-    
     #About .container .part2 .info .col {
         width: 100%;
     }
@@ -86,8 +85,15 @@
      }
     
 
+
+
     #Portfolio .content .box{
-    width: 100%;
+        width: 100%;
+
+    }
+    #Portfolio .content .box .item {
+    max-width: 280px;
+    margin: 10px auto;
     }
     #Portfolio .content .box .item .info h3 {
     padding: 5px;
@@ -96,13 +102,13 @@
     padding: 8px;
     }
 
-
+   #Blog .content {
+    row-gap: 20px;
+    }
     #Blog .content .box{
     width: 100%;
     }
-    #Blog .content .box .item {
-    margin: 10px auto;
-    }         
+
     #ContactUs form .input:nth-of-type(1) .item{
     margin-right: 0px;
     }
@@ -121,7 +127,7 @@
         /*450*/
 @media (min-width: 371px) and (max-width : 1300px) {
         nav .container .logo {
-                width: 10%;
+                max-width: 10%;
         }
         #About .container .part2 .info .col {
         width: 50%;
@@ -143,7 +149,7 @@
 /*650*/
 @media (min-width: 577px) and (max-width : 1300px) {
     nav .container .logo {
-        width: 8%;
+        max-width: 8%;
     }
     #About .container .part2 .info .col {
             font-size: 16px;
@@ -160,6 +166,10 @@
     #Portfolio .content .box {
         width: 50%;
     }
+    #Portfolio .content .box .item {
+    margin: 10px;
+    max-width: initial;
+    }
     #Portfolio .content .box .item .info h3 {
     padding: 7px;
     }
@@ -167,13 +177,11 @@
     padding: 10px;
     }
 
-
     #Blog .content .box{
         width: 50%;
     }
     #Blog .content .box .item {
-        margin: 15px 20px;
-        width: initial;
+        margin: auto 20px;
     }
 
     footer p {
@@ -187,7 +195,27 @@
 /*850*/
 @media (min-width: 769px) and (max-width : 1300px) {
         nav .container .logo {
-        width: 6%;
+        max-width: 4%;
+    }
+        nav .container .links .burger{
+        display: none;
+    }
+    nav .container .links .burger:focus + ul {
+        height: initial;
+        padding-block: initial;
+    }
+    nav .container .links ul {
+        height: initial;
+        background-color: transparent;
+        position: initial;
+        transform: initial;
+        flex-direction: initial;
+        align-items: initial;
+        row-gap: initial;
+        width: initial;
+        margin: initial;
+        transition: initial;
+        overflow: initial;
     }
         #About .container [class^="part"] {
         width: 50%;
@@ -211,10 +239,6 @@
 
 
 
-    #Blog .content .box .item {
-        margin: 20px auto;
-        width: 280px;
-    }
 
 
 
@@ -234,7 +258,7 @@
 /*1050*/
 @media (min-width: 992px) and (max-width : 1300px) {
         nav .container .logo {
-        width: 4%;
+        max-width: 5%;
     }
      #About .container .part2 .info .col {
         font-size: 16px;
@@ -258,7 +282,9 @@
         width: 33.3%;
     }
 
-
+   #Blog .content {
+    row-gap: none;
+    }
     #Blog .content .box {
         width: 33.33%;
     }
